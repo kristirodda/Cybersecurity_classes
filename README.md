@@ -69,10 +69,6 @@ The following bulletpoints will describe how to implement the elk-playbook
 
   -The “hosts” file must be updated to reflect the name of the network and the IP addresses which are allowed to access the ELK stack:_
 > [webservers] 
-> ## alpha.example.org 
-> ## beta.example.org 
-> ## 192.168.1.100
-> ## 192.168.1.110 
 > 10.0.0.9 ansible_python_interpreter=/usr/bin/python3 
 > 10.0.0.10 ansible_python_interpreter=/usr/bin/python3 
 > 10.0.0.11 ansible_python_interpreter=/usr/bin/python3 
