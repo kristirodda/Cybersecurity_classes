@@ -107,11 +107,12 @@ SSH into the control node and follow the steps below:
 - _Which URL do you navigate to in order to check that the ELK server is running?
     _In order to see if the ELK is running is this: http://<ELK_IP_52.--.--.--->:5601/app/kibana. If everything is working correctly, the Kibana page will appear. {https://github.com/kristirodda/Cybersecurity_classes/blob/main/Exploring%20Kibana/Kibana_Logs/Kibana_homepage_Successful_ELK_Launch.png} ._
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-  _Command to check which ansible container is available: {sudo docker ps}_
-  _Command to start the docker: {sudo docker start <name_of_docker>}_
-  _Command to run the docker: {sudo docker attach <name_of_docker>}_
-  _Command to get to the correct folder: {cd /etc/ansible}_
-  _Command to add the new machine's private IP (please see the format at the beginning of this document): {nano hosts}_
-  _Command to write your playbook: {nano <name>playbook.yml>_
-  _Command to run the playbook once it has been saved: {ansible-playbook <name>playbook.yml}_
+Specific commands the user will need to run to download the playbook, update the files, etc.
+
+    -Command to check which ansible container is available: **{sudo docker ps}**
+    -Command to start the docker: **{sudo docker start <name_of_docker>}**
+    -Command to run the docker: **{sudo docker attach <name_of_docker>}**
+    -Command to get to the correct folder: **{cd /etc/ansible}**
+    -Command to add the new machine's private IP (please see the format at the beginning of this document): {nano hosts}_
+    -Command to write your playbook: **{nano <name>playbook.yml}**
+    -Command to run the playbook once it has been saved: **{ansible-playbook <name>playbook.yml}**
