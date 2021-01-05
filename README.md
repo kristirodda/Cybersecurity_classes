@@ -2,15 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-<<<<<<< HEAD
-![https://github.com/kristirodda/Cybersecurity_classes/tree/main/Diagram]
-=======
-[https://github.com/kristirodda/Cybersecurity_classes/tree/main/Diagram]
->>>>>>> 7ebf0e9da7a08878896a17536b1bc4bf129225a4
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
-
-  - _TODO: Enter the playbook file._
+{https://github.com/kristirodda/Cybersecurity_classes/blob/main/Ansible/ansible_playbook.yml}
 
 This document contains the following details:
 - Description of the Topology
@@ -26,7 +20,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- _What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
@@ -49,10 +43,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-  - _TODO: The only machine which accepts connection from the internet is the Jumpbox machine and it is allowed connection only through my local IP_
+  - _The only machine which accepts connection from the internet is the Jumpbox machine and it is allowed connection only through my local IP_
 
 Machines within the network can only be accessed by _____.
-  - _TODO: Because each of my Web machines is stirint system logs to the ELK virtual machine, they each have access to the ELK VM_
+  - _TODO: Because each of my Web machines is stirint system logs to the ELK virtual machine, they each have access to the ELK VM through a mirrored connection set up through Azure._
 
   - _A summary of the access policies in place can be found in the table below._
 
@@ -96,7 +90,7 @@ This ELK server is configured to monitor the following machines:
     _Web-3: IP: 10.0.0.11_
 
 We have installed the following Beats on these machines:
-- _I was able to successfully install Filebeat as well as MetricBeat on my Elk-vm_
+- _I was able to successfully install Filebeat as well as MetricBeat to my Elk stack._
 
 These Beats allow us to collect the following information from each machine:
 - _Filebeat is a collection of data on log events. This information is sent through Logstash which outputs to Kibana and gives the ability to read what is happening within our network._
@@ -106,13 +100,12 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+- _Which file is the playbook? Where do you copy it?
+    _There is a file attached to the ansible playbook. This should be copied into a file on the ansible docker to the following location /etc/ansible/<file>_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+    _It is important to ssh into any machine of which the playbook is designed to run. Then copy the file and run it on that machine. ELK and Filebeat are designed to work together. For instance, the Filebeat program is designed to take logs from the ELK vm and output the information to Kibana through mirrors. Which means that the Filebeat should be installed on the web-machines where files are being monitored. A mirrored connection needs to be establisted through Azure so that no ssh connection is required from Web-machines to the ELK stack. This protects the ELK machine from attack. 
 - _Which URL do you navigate to in order to check that the ELK server is running?
+    _In order to see if the ELK is running is this: http://<ELK_IP_52.--.--.--->:5601/app/kibana. If everything is working correctly, the Kibana page will appear. {https://github.com/kristirodda/Cybersecurity_classes/blob/main/Exploring%20Kibana/Kibana_Logs/Kibana_homepage_Successful_ELK_Launch.png} ._
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
