@@ -18,8 +18,9 @@ This document contains the following details:
 ### Description of the Topology
 
 -The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
-  -Load balancing ensures that the application will be highly regulated, in addition to restricting http traffic access to the network. Load balancers ensures equal distribution of web traffic to the network.
-  -The primary advantage of using a Jump Box is that it provides a single point of entry for an entire network.
+
+-Load balancing ensures that the application will be highly regulated, in addition to restricting http traffic access to the network. Load balancers ensures equal distribution of web traffic to the network.
+-The primary advantage of using a Jump Box is that it provides a single point of entry for an entire network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the operating system and logs each event. Filebeat is designed to record logs from computers that you set up such as log files, it also collects log events and outputs them into the ELK stack for easy reading. Where as Metricbeat records statistics and metrics from the operating system and services which are running on the server. Much like Filebeat, Metricbeat will output data based on how you set it up and output through Elasticsearch or Logstash for easy reading.
 
