@@ -25,7 +25,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the operating system and logs each event. 
 
-  -_Filebeat is designed to record logs from computers that you set up such as log files, it also collects log events and outputs them into the ELK stack for easy reading.
+  -_Filebeat is designed to record logs from computers that you set up such as log files, it also collects log events and outputs them into the ELK stack for easy reading._
   
   -_Metricbeat records statistics and metrics from the operating system and services which are running on the server. Much like Filebeat, Metricbeat will output data based on how you set it up and output through Elasticsearch or Logstash for easy reading._
 
