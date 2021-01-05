@@ -68,12 +68,12 @@ The playbook implements the following tasks:
 The following bulletpoints will describe how to implement the elk-playbook
 
   -The “hosts” file must be updated to reflect the name of the network and the IP addresses which are allowed to access the ELK stack:_
-> [webservers] 
-> 10.0.0.9 ansible_python_interpreter=/usr/bin/python3 
-> 10.0.0.10 ansible_python_interpreter=/usr/bin/python3 
-> 10.0.0.11 ansible_python_interpreter=/usr/bin/python3 
-> [elk] 
-> 10.2.1.4 ansible_python_interpreter=/usr/bin/python3 
+>[webservers] 
+>10.0.0.9 ansible_python_interpreter=/usr/bin/python3 
+>10.0.0.10 ansible_python_interpreter=/usr/bin/python3 
+>10.0.0.11 ansible_python_interpreter=/usr/bin/python3
+>[elk] 
+>10.2.1.4 ansible_python_interpreter=/usr/bin/python3 
       - _Once the "hosts" file is updated, the ELK playbook must be made to tellt he computer which programs to automatically start:_ 
       - _In order to install and run the ELK playbook, the follwing command must be run on command line <ansible-playbook elkplaybook.yml>. After the command is run, the display will show which have been started, changed and/or failed._
           [https://github.com/kristirodda/Cybersecurity_classes/blob/main/Images/Successful_playbook_install.png]
@@ -108,10 +108,10 @@ SSH into the control node and follow the steps below:
 
 Specific commands the user will need to run to download the playbook, update the files, etc.
 
-    -Command to check which ansible container is available: **{sudo docker ps}**
-    -Command to start the docker: **{sudo docker start <name_of_docker>}**
-    -Command to run the docker: **{sudo docker attach <name_of_docker>}**
-    -Command to get to the correct folder: **{cd /etc/ansible}**
-    -Command to add the new machine's private IP (please see the format at the beginning of this document): {nano hosts}_
-    -Command to write your playbook: **{nano <name>playbook.yml}**
-    -Command to run the playbook once it has been saved: **{ansible-playbook <name>playbook.yml}**
+    -Command to check which ansible container is available: {sudo docker ps}
+    -Command to start the docker: {sudo docker start <name_of_docker>}
+    -Command to run the docker: {sudo docker attach <name_of_docker>}
+    -Command to get to the correct folder: {cd /etc/ansible}
+    -Command to add the new machine's private IP (please see the format at the beginning of this document): {nano hosts}
+    -Command to write your playbook: {nano <name>playbook.yml}
+    -Command to run the playbook once it has been saved: {ansible-playbook <name>playbook.yml}
