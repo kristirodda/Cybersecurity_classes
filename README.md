@@ -2,7 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
+<<<<<<< HEAD
 ![https://github.com/kristirodda/Cybersecurity_classes/tree/main/Diagram]
+=======
+[https://github.com/kristirodda/Cybersecurity_classes/tree/main/Diagram]
+>>>>>>> 7ebf0e9da7a08878896a17536b1bc4bf129225a4
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
