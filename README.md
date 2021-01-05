@@ -19,13 +19,13 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly regulated, in addition to restricting http traffic access to the network. Load balancers ensures equal distribution of web traffic to the network.
+-Load balancing ensures that the application will be highly regulated, in addition to restricting http traffic access to the network. Load balancers ensures equal distribution of web traffic to the network.
 
-The primary advantage of using a Jump Box is that it provides a single point of entry for an entire network.
+-The primary advantage of using a Jump Box is that it provides a single point of entry for an entire network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the operating system and logs each event.
-  _Filebeat is designed to record logs from computers that you set up such as log files, it also collects log events and outputs them into the ELK stack for easy reading._
-  _Metricbeat records statistics and metrics from the operating system and services which are running on the server. Much like Filebeat, Metricbeat will output data based on how you set it up and output through Elasticsearch or Logstash for easy reading._
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the operating system and logs each event. 
+ -_Filebeat is designed to record logs from computers that you set up such as log files, it also collects log events and outputs them into the ELK stack for easy reading._
+-_Metricbeat records statistics and metrics from the operating system and services which are running on the server. Much like Filebeat, Metricbeat will output data based on how you set it up and output through Elasticsearch or Logstash for easy reading._
 
 The configuration details of each machine may be found below.
 
@@ -41,8 +41,8 @@ The configuration details of each machine may be found below.
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-  - _The only machine which accepts connection from the internet is the Jumpbox. Incoming rules are set up to allow a connection through only one local machine: 170.*.*.*._
+Only the **Jumpbox** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+  - _The only machine which accepts connection from the internet is the Jumpbox. Incoming rules are set up to allow a connection through only one local machine's IP address._
 
 Machines within the network can only be accessed by _the Jumpbox_.
   _Each web-machine is desinged to ouput sys-logs to the ELK machine. None of these are accessible publicly. Inbound rules are established which allow connection only within the virtual network from the Jumpbox. Each Web-machine has access to the ELK VM through a mirrored connection set up through Azure._
