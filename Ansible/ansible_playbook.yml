@@ -1,0 +1,30 @@
+---
+- name: ansible playbook
+  hosts: webservers
+  become: true
+  tasks:
+
+   - name: install docker.io on my web vms
+     apt:
+         name: docker.io
+         state: present
+         update_cache: yes
+
+   - name: install python3.pip on my web vms
+     apt:
+         name: python3-pip
+         state: present
+
+   - name: install python docker module
+     pip:
+         name: docker
+         state: present
+
+   - name: download and launch docker web container
+     docker_container:
+         name: dvwa
+         image: cyberxsecurity/dvwa
+         state: started
+         restart_policy: always
+         published_ports: 80:80
+
