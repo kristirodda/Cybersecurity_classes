@@ -65,18 +65,19 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   - Any opportunity presented which can automate a task is valuable because it allows freedom from daily repetition of the same task. This not only improves productivity, but it also removes variables for mistakes based on repetitve action._
 
 The playbook implements the following tasks:
-  _The following bulletpoints will describe how to implement the elk-playbook_
-      - _The “hosts” file must be updated to reflect the name of the network and the IP addresses which are allowed to access the ELK stack:_
-              [webservers] 
-              ## alpha.example.org 
-              ## beta.example.org 
-              ## 192.168.1.100
-              ## 192.168.1.110 
-              10.0.0.9 ansible_python_interpreter=/usr/bin/python3 
-              10.0.0.10 ansible_python_interpreter=/usr/bin/python3 
-              10.0.0.11 ansible_python_interpreter=/usr/bin/python3 
-              [elk] 
-              10.2.1.4 ansible_python_interpreter=/usr/bin/python3 
+The following bulletpoints will describe how to implement the elk-playbook
+
+  -The “hosts” file must be updated to reflect the name of the network and the IP addresses which are allowed to access the ELK stack:_
+> [webservers] 
+> ## alpha.example.org 
+> ## beta.example.org 
+> ## 192.168.1.100
+> ## 192.168.1.110 
+> 10.0.0.9 ansible_python_interpreter=/usr/bin/python3 
+> 10.0.0.10 ansible_python_interpreter=/usr/bin/python3 
+> 10.0.0.11 ansible_python_interpreter=/usr/bin/python3 
+> [elk] 
+> 10.2.1.4 ansible_python_interpreter=/usr/bin/python3 
       - _Once the "hosts" file is updated, the ELK playbook must be made to tellt he computer which programs to automatically start:_ 
       - _In order to install and run the ELK playbook, the follwing command must be run on command line <ansible-playbook elkplaybook.yml>. After the command is run, the display will show which have been started, changed and/or failed._
           [https://github.com/kristirodda/Cybersecurity_classes/blob/main/Images/Successful_playbook_install.png]
