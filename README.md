@@ -123,4 +123,4 @@ Specific commands the user will need to run to download the playbook, update the
     -Command to get to the correct folder: {cd /etc/ansible}
     -Command to add the new machine's private IP (please see the format at the beginning of this document): {nano hosts}
     -Command to write your playbook: {nano <name>playbook.yml}
-    -Command to run the playbook once it has been saved: {ansible-playbook <name>playbook.yml}
+    _Command to run the playbook once it has been saved: {ansible-playbook <name>playbook.yml}
