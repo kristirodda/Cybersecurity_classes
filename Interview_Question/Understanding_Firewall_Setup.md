@@ -49,7 +49,7 @@ Answer:
 
     The disadvantage of this firewall configuration is that if it is set up incorrectly, then the machine's designed function might not be achieved. As learned, through a lot of trial and error when establishing these rules to protect the ELK machine. If even one portion of the firewall rule is written incorrectly, the whole thing fails. 
 
-    * In order to monitor suspicious authentication attempts, I would utilize the
+    * The first way to ensure security on my network is through the health probe set up. I would check the configurations of the load balancer to ensure an automatic fail for too many log in attempts. 
 
 
 
